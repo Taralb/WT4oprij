@@ -30,7 +30,7 @@
 	                elem.style.border = '2px solid red';
                 }
                 else{
-                    muisop(vakjeid);
+                    kolomop(vakjeid);
                 }
             }
             function condaf(vakjeid){
@@ -40,16 +40,29 @@
 	                elem.style.border = '2px solid red';
                 }
                 else{
-                    muisaf(vakjeid);
+                    kolomaf(vakjeid);
+                }
+            }
+            function kolomop(vakjeid){
+                var all = document.getElementsByClassName("kolom1");
+                for(var i=0; i<all.length; i++){
+                    all[i].bgColor = 'blue';
+                }
+            }
+            function kolomaf(vakjeid){
+                var all = document.getElementsByClassName("kolom1");
+                for(var x=0; x<all.length; x++){
+                    all[x].bgColor = 'white';
                 }
             }
         </script>
     </head>
     <body> 
         <table>
-            <tr> <td id="vakje00" onclick=vakjevullen("vakje00") onmouseover=condop("vakje00") onmouseout=condaf("vakje00")></td> <td id="vakje10" onclick=vakjevullen("vakje10")></td> </tr>
-            <tr> <td id="vakje01" onclick=vakjevullen("vakje01")></td> <td id="vakje11" onclick=vakjevullen("vakje11")> </td></tr>
+            <tr> <td class="kolom1" id="vakje00" onclick=vakjevullen("vakje00") onmouseover=condop("vakje00") onmouseout=condaf("vakje00")></td>
+                <td class="kolom2" id="vakje10" onclick=vakjevullen("vakje10")></td> </tr>
+            <tr> <td class="kolom1" id="vakje01" onclick=vakjevullen("vakje01") onmouseover=condop("vakje00") onmouseout=condaf("vakje00")></td>
+                <td class="kolom2" id="vakje11" onclick=vakjevullen("vakje11")> </td></tr>
         </table>
-    
     </body>
 </html>
