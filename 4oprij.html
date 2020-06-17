@@ -11,14 +11,45 @@
             function vakjevullen(vakjeid){
 	            var elem = document.getElementById(vakjeid);
 	            elem.bgColor = 'red';
-	            elem.style.border = '5px solid red';
+	            elem.style.border = '2px solid red';
+            }
+            function muisop(vakjeid){
+	            var elem = document.getElementById(vakjeid);
+	            elem.bgColor = 'blue';
+	            elem.style.border = '2px solid blue';
+            }
+            function muisaf(vakjeid){
+	            var elem = document.getElementById(vakjeid);
+	            elem.bgColor = 'white';
+	            elem.style.border = '2px solid blue';
+            }
+            function condop(vakjeid){
+                var elem = document.getElementById(vakjeid);
+                if(elem.bgColor == 'red'){
+                    elem.bgColor = 'red';
+	                elem.style.border = '2px solid red';
+                }
+                else{
+                    muisop(vakjeid);
+                }
+            }
+            function condaf(vakjeid){
+                var elem = document.getElementById(vakjeid);
+                if(elem.bgColor == 'red'){
+                    elem.bgColor = 'red';
+	                elem.style.border = '2px solid red';
+                }
+                else{
+                    muisaf(vakjeid);
+                }
             }
         </script>
     </head>
     <body> 
         <table>
-            <tr> <td id="vakje00" onclick=vakjevullen("vakje00")></td> <td id="vakje10" onclick=vakjevullen("vakje10")></td> </tr>
+            <tr> <td id="vakje00" onclick=vakjevullen("vakje00") onmouseover=condop("vakje00") onmouseout=condaf("vakje00")></td> <td id="vakje10" onclick=vakjevullen("vakje10")></td> </tr>
             <tr> <td id="vakje01" onclick=vakjevullen("vakje01")></td> <td id="vakje11" onclick=vakjevullen("vakje11")> </td></tr>
         </table>
+    
     </body>
 </html>
