@@ -1,1 +1,24 @@
-hoi
+<html>    
+    <head>
+        <style>
+            td{
+                border: 2px solid blue;
+                width: 30px;
+                height:30px;
+                }
+        </style>
+        <script>
+            function vakjevullen(vakjeid){
+	            var elem = document.getElementById(vakjeid);
+	            elem.bgColor = 'red';
+	            elem.style.border = '5px solid red';
+            }
+        </script>
+    </head>
+    <body> 
+        <table>
+            <tr> <td id="vakje00" onclick=vakjevullen("vakje00")></td> <td id="vakje10" onclick=vakjevullen("vakje10")></td> </tr>
+            <tr> <td id="vakje01" onclick=vakjevullen("vakje01")></td> <td id="vakje11" onclick=vakjevullen("vakje11")> </td></tr>
+        </table>
+    </body>
+</html>
